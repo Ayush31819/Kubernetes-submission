@@ -1,9 +1,5 @@
-ayush@AyushJ MINGW64 ~
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/the_project (main)
 $ kubectl get pods
-NAME                           READY   STATUS    RESTARTS   AGE
-hashgen-dep-6765d94b5b-wccgz   1/1     Running   0          112m
-
-ayush@AyushJ MINGW64 ~
-$ kubectl get deployments
-NAME          READY   UP-TO-DATE   AVAILABLE   AGE
-hashgen-dep   1/1     1            1           117m
+NAME                                READY   STATUS    RESTARTS   AGE
+hashgen-dep-6765d94b5b-wccgz        1/1     Running   0          141m
+todoappdeployment-9f89cb7b4-rccmp   1/1     Running   0          42s
