@@ -1,0 +1,9 @@
+ayush@AyushJ MINGW64 ~
+$ kubectl get pods
+NAME                           READY   STATUS    RESTARTS   AGE
+hashgen-dep-6765d94b5b-wccgz   1/1     Running   0          112m
+
+ayush@AyushJ MINGW64 ~
+$ kubectl get deployments
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+hashgen-dep   1/1     1            1           117m
