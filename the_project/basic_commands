@@ -1,5 +1,27 @@
-ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/the_project (main)
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs (main)
+$ ls
+manifests  output.txt
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs (main)
+$ cd manifests
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
+$ kubectl apply -f deployment.yaml
+deployment.apps/todo-app-deployment created
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
+$ kubectl get deployments
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+todo-app-deployment   1/1     1            1           7s
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
 $ kubectl get pods
-NAME                                READY   STATUS    RESTARTS   AGE
-hashgen-dep-6765d94b5b-wccgz        1/1     Running   0          141m
-todoappdeployment-9f89cb7b4-rccmp   1/1     Running   0          42s
+NAME                                   READY   STATUS    RESTARTS   AGE
+todo-app-deployment-5f8484d579-2s6ch   1/1     Running   0          13s
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
+$ kubectl logs ^C
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
+$ kubectl logs todo-app-deployment-5f8484d579-2s6ch
+Server started in port 3000
