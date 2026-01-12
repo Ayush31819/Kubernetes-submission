@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todo-app-deployment
+  name: nodejs-app-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: todo-app
+      app: nodejs-app
   template:
     metadata:
       labels:
-        app: todo-app
+        app: nodejs-app
     spec:
       containers:
-        - name: todo-app
-          image: ayush318/todo-app:latest
+        - name: nodejs-app
+          image: ayush318/nodejsapp:latest

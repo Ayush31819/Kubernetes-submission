@@ -1,27 +1,39 @@
-ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs (main)
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/the_project (main)
+$ docker push ayush318/nodejsapp:latest
+The push refers to repository [docker.io/ayush318/nodejsapp]
+f516c9936166: Pushed
+78bc388f2146: Pushed
+1e5a4c89cee5: Layer already exists
+69aba4a2d112: Pushed
+dd71dde834b5: Layer already exists
+455a63c71ee7: Pushed
+75e1f260296f: Layer already exists
+f18232174bc9: Layer already exists
+25ff2da83641: Layer already exists
+latest: digest: sha256:7d0e11db0dd1f5f1f81ce05376d738842c0b6c5695157d3621a0a6144582e421 size: 856
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/the_project (main)
+$ cd ..
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission (main)
 $ ls
-manifests  output.txt
+README.md  output_logs  the_project
 
-ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs (main)
-$ cd manifests
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission (main)
+$ cd out_logs/manifests
+bash: cd: out_logs/manifests: No such file or directory
+
+ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission (main)
+$ cd output_logs/manifests
 
 ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
-$ kubectl apply -f deployment.yaml
-deployment.apps/todo-app-deployment created
-
-ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
-$ kubectl get deployments
-NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
-todo-app-deployment   1/1     1            1           7s
+$ kubectl rollout restart deployment/nodejs-app-deployment
+deployment.apps/nodejs-app-deployment restarted
 
 ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
 $ kubectl get pods
-NAME                                   READY   STATUS    RESTARTS   AGE
-todo-app-deployment-5f8484d579-2s6ch   1/1     Running   0          13s
-
-ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
-$ kubectl logs ^C
-
-ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
-$ kubectl logs todo-app-deployment-5f8484d579-2s6ch
-Server started in port 3000
+NAME                                     READY   STATUS    RESTARTS      AGE
+hashgenerator-dep-7f9c5cd677-xs7vn       1/1     Running   0             49m
+hashresponse-dep-6db44876-hhnmk          1/1     Running   0             34m
+nodejs-app-deployment-5d7d6f999f-s4mbt   1/1     Running   0             86s
+todo-app-deployment-5f8484d579-2s6ch     1/1     Running   1 (57m ago)   23h

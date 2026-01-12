@@ -1,3 +1,7 @@
 ayush@AyushJ MINGW64 ~/kube_practice/kubernetes-submission/output_logs/manifests (main)
-$ kubectl logs todo-app-deployment-5f8484d579-2s6ch
-Server started in port 3000
+$ kubectl port-forward nodejs-app-deployment-5d7d6f999f-s4mbt 4003:3000
+Forwarding from 127.0.0.1:4003 -> 3000
+Forwarding from [::1]:4003 -> 3000
+Handling connection for 4003
+Handling connection for 4003
+Handling connection for 4003
