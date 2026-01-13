@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app-deployment
+  name: hashresponse-dep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs-app
+      app: hashresponse
   template:
     metadata:
       labels:
-        app: nodejs-app
+        app: hashresponse
     spec:
       containers:
-        - name: nodejs-app
-          image: ayush318/nodejsapp:latest
+        - name: hashresponse
+          image: ayush318/dwkimage:latest

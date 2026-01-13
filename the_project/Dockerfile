@@ -1,11 +1,11 @@
-FROM node:18-alpine
+FROM node:alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY package* ./
 
-RUN npm install
+RUN npm ci
 
-COPY server.js .
+COPY . .
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
