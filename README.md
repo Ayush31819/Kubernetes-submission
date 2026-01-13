@@ -9,4 +9,5 @@
 3 - [1.3](https://github.com/Ayush31819/Kubernetes-submission/tree/1.3)  
 4 - [1.4](https://github.com/Ayush31819/Kubernetes-submission/tree/1.4)  
 5 - [1.5](https://github.com/Ayush31819/Kubernetes-submission/tree/1.5)  
-6 - [1.6](https://github.com/Ayush31819/Kubernetes-submission/tree/1.6)
+6 - [1.6](https://github.com/Ayush31819/Kubernetes-submission/tree/1.6)  
+7 - [1.7](https://github.com/Ayush31819/Kubernetes-submission/tree/1.7)
